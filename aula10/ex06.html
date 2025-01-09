@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando o DOM</title>
+    <style>
+        div{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: beige;
+            height: 200px;
+            width: 200px;
+            line-height: 190px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="int"clicar(mouseout)>Interaja...</div>
+    <script>
+        var a = window.document.getElementById('int')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'blue'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.background = 'red'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'beige'
+        }
+    </script>
+</body>
+</html>

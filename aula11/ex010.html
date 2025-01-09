@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coferindo velocidade</title>
+</head>
+<body>
+    <h1>Sistema de velocidade</h1>
+    Velocidade do carro: <input type="number" name="vel1" id="vel1">km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var vel = document.getElementById('vel1')
+            var ve = Number(vel.value)
+            var res = document.getElementById('res')
+
+            if(ve > 60){
+                res.innerHTML += `<p>Você ultrapassou o limite de 60km/h. <strong>Você foi multado</strong>.</p>`
+            }
+
+            res.innerHTML += `<p>Sua velocidade é de <strong>${ve}km/h</strong></p>`
+        }
+    </script>
+</body>
+</html>
